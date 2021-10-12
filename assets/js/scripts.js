@@ -1,4 +1,4 @@
-// local reviews data
+// Local reviews data
 const reviews = [
     {
       id: 1,
@@ -38,7 +38,7 @@ const reviews = [
     },
   ];
 
-// select items
+// Select items
 const img = document.getElementById('person-img');
 const author = document.getElementById('author');
 const job = document.getElementById('job');
@@ -48,15 +48,15 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
-// set starting item
+// Set starting item
 let currentItem = 0;
 
-// load initial item
+// Load initial item
 window.addEventListener('DOMContentLoaded', function(){
     showPerson();
 });
 
-// show person based on item
+// Show person based on item
 function showPerson(){
     const item = reviews[currentItem];
     img.src = item.img;
@@ -65,7 +65,7 @@ function showPerson(){
     info.textContent = item.text;
 }
 
-// show next person
+// Show next person
 nextBtn.addEventListener('click', function(){
     currentItem++;
     if(currentItem > reviews.length -1){
@@ -74,7 +74,7 @@ nextBtn.addEventListener('click', function(){
     showPerson();
 });
 
-// show prev person
+// Show prev person
 prevBtn.addEventListener('click', function(){
     currentItem--;
     if(currentItem < 0){
@@ -83,4 +83,10 @@ prevBtn.addEventListener('click', function(){
     showPerson();
 });
 
-//surprise me 
+//Show random person
+randomBtn.addEventListener('click', function(){
+    currentItem = Math.floor(Math.random() * reviews.length);
+    showPerson();
+});
+
+
