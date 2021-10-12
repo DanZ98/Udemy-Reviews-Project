@@ -1,4 +1,4 @@
-# Changing Background Color Project
+# Reviews JavaScript Project
 
 A Udemy project showcasing review testimonials in JavaScript. This is a more JavaScript type of project within the JavaScript section of the course. 
 
